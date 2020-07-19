@@ -42,7 +42,7 @@ async function main(id, times) {
   const pathName = writeStream.path;
 
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
 
@@ -78,7 +78,7 @@ async function main(id, times) {
   await browser.close();
 }
 
-main("231181", 300);
+main("231481", 300);
 
 // OREGON LIC SEARCH: 231181;
 // https://www.ccb.state.or.us/search/list_results.aspx
